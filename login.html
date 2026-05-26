@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="module" src="./js/navbar.js"></script>
+  <meta charset="UTF-8">
+    <eta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <nav>
+  <div class="ice"><a href="index.html">SES</a></div>
+  <div class="menu">
+    <a href="dashboard.html">Create</a>
+        <a href="order.html">Order Now</a>
+    <a href="register.html" id="signupLink">Sign Up</a>
+  </div>
+</nav>
+<br><br><br>
+
+<div class="login">
+<h2>Log In</h2>
+<input type="email" id="email" placeholder="Email" />
+<br>
+<input id="password" type="password" placeholder="Password" />
+<br>
+<button id="loginBtn">Login</button>
+<p id="msg"></p>
+<p>
+  <a href="#" id="forgotPasswordLink">
+    Forgot your password?
+  </a>
+</p>
+<a href="register.html">Don't have an accout? Sign Up here</a>
+</div>
+
+<script type="module">
+import { login } from "./js/auth.js";
+
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const msg = document.getElementById("msg");
+
+document.getElementById("loginBtn").addEventListener("click", async () => {
+  try {
+    await login(email.value, password.value);
+    msg.innerText = "Logged in!";
+    window.location.href = "dashboard.html";
+  } catch (err) {
+    msg.innerText = err.message;
+  }
+});
+</script>
+
+<style>
+
+input{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login{
+  width: 20%;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(195, 209, 221, 0.5);
+  border: 20px;
+  border-color: rgba(195, 209, 221, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 8%;
+  color: aliceblue;
+}
+
+.login a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+button{
+  font-size: 17px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+</style>
+
+</body>
+</html>

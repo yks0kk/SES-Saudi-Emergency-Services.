@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./js/dashboard.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="module" src="./js/navbar.js"></script>
+</head>
+<body>
+
+  <nav>
+  <div class="ice"><a href="index.html">SES</a></div>
+  <div class="menu">
+        <a href="order.html">Order Now</a>
+            <a href="register.html" id="signupLink">Sign Up</a>
+    <a href="login.html" id="loginLink">Login</a>
+    <span id="userGreeting" style="display:none;"></span>
+<a href="#" id="logoutLink" class="logout-btn" style="display:none;">Logout</a>  </div>
+
+</nav>
+<br><br><br>
+<p id="welcome" class="user">Checking user...</p>
+
+<div class="login">
+<h2>Create Document</h2>
+<input id="title" placeholder="Full Name" />
+<input id="contact" placeholder="Your Phone Number" />
+<input id="emergencyContactName" placeholder="Emergency Contact Name" />
+<input id="emergencyContactNumber" placeholder="Emergency Contact Number" />
+<input id="emergencyContactRelation" placeholder="Relation (e.g. Mother, Friend)" />
+<select id="bloodType">
+  <option value="">Blood Type</option>
+  <option>A+</option>
+  <option>A-</option>
+  <option>B+</option>
+  <option>B-</option>
+  <option>AB+</option>
+  <option>AB-</option>
+  <option>O+</option>
+  <option>O-</option>
+</select>
+<input id="disability" placeholder="Disability (if any)" />
+<textarea id="notes" placeholder="Notes"></textarea>
+<br><br>
+<button id="saveBtn">Save Document</button>
+</div>
+<hr>
+
+<h2 class="docst">Your Documents</h2>
+<div id="docs" class="docs"></div>
+
+<style>
+  
+  body{
+    color: aliceblue;
+  }
+
+  .user{
+    font-size: 30px;
+    margin-left: 20px;
+  }
+
+  input{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea{
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.login{
+  width: 60%;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(195, 209, 221, 0.5);
+  border: 20px;
+  border-color: rgba(195, 209, 221, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 3%;
+  color: aliceblue;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.login a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+button{
+  font-size: 17px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+select{
+  font-size: 17px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 17%;
+  text-align: center;
+}
+
+.docst{
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+}
+
+.docs{
+  font-size: 20px;
+  width: 35%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(195, 209, 221, 0.5);
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+</style>
+
+
+</body>
+</html>

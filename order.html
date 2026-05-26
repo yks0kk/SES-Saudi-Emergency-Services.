@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("jNzoK62rt_b1YxAaB");
+</script>
+  <script type="module" src="./js/navbar.js"></script>
+  <script type="module" src="./js/order.js"></script>
+  <title>Order Now</title>
+</head>
+
+<body>
+
+<nav>
+  <div class="ice"><a href="index.html">SES</a></div>
+
+  <div class="menu">
+    <a href="dashboard.html">Create</a>
+
+    <a href="register.html" id="signupLink">Sign Up</a>
+    <a href="login.html" id="loginLink">Login</a>
+    <span id="userGreeting" style="display:none;"></span>
+
+    <a style="margin-left: 7px;" href="#" id="cartIcon">
+      🛒 (<span id="cartCount">0</span>)
+    </a>
+
+    <a href="#" id="logoutLink" class="logout-btn" style="display:none;">Logout</a>
+  </div>
+</nav>
+
+<br><br><br><br>
+<div class="hey">
+  <h1>Hey There!</h1>
+  <p>We've made it easier to keep your emergency information on you all the time.</p>
+</div>
+<div class="ordr">
+<p>How to order your NFC card:</p>
+<ol>
+  <li><a href="register.html">Sign Up</a> or <a href="login.html">Log in</a></li>
+  <li>Create your document <a href="dashboard.html">here</a></li>
+  <li>Copy your document link</li>
+  <li>Paste it below and click "Add to Cart"</li>
+  <li>Checkout; Stay Safe!</li>
+</ol>
+</div>
+
+<!-- ================= ORDER INPUT ================= -->
+<div class="nfc">
+  <h2>Add Your Document</h2>
+  <input id="docLink" placeholder="Paste document link" />
+  <button id="addBtn">Add to cart</button>
+</div>
+
+<br>
+
+<!-- ================= SIDE CART PANEL ================= -->
+<div id="cartPanel" class="cart-panel">
+
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <span id="closeCart" class="close-btn"><-</span>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-footer">
+  <p>Delivery: 10 SAR</p>
+  <p><strong>Total: <span id="total">0</span> SAR</strong></p>
+
+  <button class="btn" id="checkoutBtn">Checkout</button>
+</div>
+
+</div>
+
+<br><br>
+
+<style>
+
+body{
+  color: aliceblue;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hey{
+  width: 95%;
+  border-radius: 15px;
+  color: aliceblue;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.ordr{
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(183, 207, 228);
+}
+
+.nfc{
+  background-color: rgba(195, 209, 221, 0.5);
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+  width: 93%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.cart-panel{
+  color:rgb(5, 21, 34);
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.btn{
+margin-bottom: 45px;
+font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+button{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.crtbtn{
+  background-color: #1a3b69;
+}
+
+</style>
+
+</body>
+</html>

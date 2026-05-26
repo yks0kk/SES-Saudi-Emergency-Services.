@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editor</title>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js/editor.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<br><br>
+<div class="login">
+<h2>Edit Your Document</h2>
+<input id="editor-title" placeholder="Full Name" />
+<input id="editor-contact" placeholder="Your Number" />
+<input id="editor-emergencyContactName" placeholder="Emergency Contact Name" />
+<input id="editor-emergencyContactNumber" placeholder="Emergency Contact Number" />
+<input id="editor-emergencyContactRelation" placeholder="Relation" />
+<select id="editor-bloodType">
+  <option value="">Blood Type</option>
+  <option>A+</option><option>A-</option>
+  <option>B+</option><option>B-</option>
+  <option>AB+</option><option>AB-</option>
+  <option>O+</option><option>O-</option>
+</select>
+<input id="editor-disability" placeholder="Disability (if any)" />
+<textarea id="editor-notes" placeholder="Notes"></textarea>
+<br><br>
+<button id="editor-saveBtn">Save</button>
+<p id="status"></p>
+</div>
+
+<style>
+
+input{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea{
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.login{
+  width: 60%;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(195, 209, 221, 0.5);
+  border: 20px;
+  border-color: rgba(195, 209, 221, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 8%;
+  color: aliceblue;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+select{
+  font-size: 17px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 30%;
+  text-align: center;
+}
+
+</style>
+
+</body>
+</html>

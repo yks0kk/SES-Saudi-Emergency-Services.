@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+    <eta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+</head>
+<body>
+<nav>
+  <div class="ice"><a href="index.html">SES</a></div>
+  <div class="menu">
+    <a href="dashboard.html">Create</a>
+        <a href="order.html">Order Now</a>
+    <a href="login.html" id="loginLink">Log In</a>
+  </div>
+</nav>
+<br><br><br>
+<div class="login">
+<h2>Sign Up</h2>
+<input id="username" placeholder="Username" />
+<input id="email" placeholder="Email" />
+<input id="password" type="password" placeholder="Password" />
+<br>
+<button id="registerBtn">Create Account</button>
+<p id="msg"></p>
+<a href="login.html">Already have an accout? LogIn here</a>
+</div>
+
+<script type="module">
+import { register } from "./js/auth.js";
+
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const msg = document.getElementById("msg");
+
+document.getElementById("registerBtn").addEventListener("click", async () => {
+  try {
+    await register(username.value, email.value, password.value);
+
+    msg.innerText = "Account created successfully";
+    window.location.href = "dashboard.html";
+  } catch (err) {
+    msg.innerText = err.message;
+  }
+});
+</script>
+
+<style>
+
+input{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login{
+  width: 20%;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(195, 209, 221, 0.5);
+  border: 20px;
+  border-color: rgba(195, 209, 221, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 8%;
+  color: aliceblue;
+}
+
+.login a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+button{
+  font-size: 17px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+</style>
+
+</body>
+</html>
